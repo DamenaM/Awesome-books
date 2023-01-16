@@ -48,6 +48,13 @@ function addAuthor() {
     </div>`;
 
 // mylist.insertAdjacentHTML('beforeend',bookdetails);
+mydiv.innerHTML += bookDetails;
+    mylist.append(mydiv);
+    
+    document.querySelector('.clickdelete').addEventListener ('click',function(){
+      let removeDiv = this.parentNode.parentNode;
+      mylist.removeChild(mydiv);
+    });
  
 };
 
