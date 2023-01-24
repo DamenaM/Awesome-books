@@ -1,12 +1,5 @@
-// get the current date
-const dateTimeDiv = document.getElementById('DateTime');
-const date = new Date();
-const dateString = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-const timeString = date.toLocaleTimeString('en-US', {
-  hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true,
-});
-const dateTime = `${dateString} , ${timeString}`;
-dateTimeDiv.innerHTML = dateTime;
+import printDate from './datetime.js';
+
 class Book {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
@@ -38,11 +31,11 @@ class Book {
     this.books.forEach((book, index) => {
       const div = document.createElement('div');
       div.innerHTML = `
-       &nbsp ${book.title} &nbsp By 
-                ${book.author}
-                <button class="remove-button" data-index="${index}">Remove</button>
-                <br><br>
-            `;
+         &nbsp ${book.title} &nbsp by &nbsp
+                  ${book.author}
+                  <button class="remove-button" data-index="${index}">Remove</button>
+                  <br><br>
+              `;
       if (index % 2 === 0) {
         div.style.background = '#dddddd';
       } else {
@@ -52,6 +45,9 @@ class Book {
       this.bookDisplay.appendChild(div);
       div.classList.add('book_list_container');
     });
+    window.addEventListener('load', () => {
+      printDate();
+    });
 
     document.querySelectorAll('.remove-button').forEach((button) => {
       button.addEventListener('click', () => {
@@ -60,13 +56,4 @@ class Book {
     });
   }
 }
-
-const book = new Book();
-
-book.buttonAdd.addEventListener('click', () => {
-  const title = book.bookTitle.value;
-  const author = book.bookAuthor.value;
-  book.addBook(title, author);
-  book.bookTitle.value = '';
-  book.bookAuthor.value = '';
-});
+export default Book;
