@@ -1,6 +1,10 @@
 import Book from './booklist.js';
 import printDate from './datetime.js';
 
+window.addEventListener('load', () => {
+  printDate();
+});
+
 const newBook = new Book();
 newBook.buttonAdd.addEventListener('click', () => {
   const title = newBook.bookTitle.value;
@@ -9,6 +13,4 @@ newBook.buttonAdd.addEventListener('click', () => {
   newBook.bookTitle.value = '';
   newBook.bookAuthor.value = '';
 });
-window.addEventListener('load', () => {
-  printDate();
-});
+

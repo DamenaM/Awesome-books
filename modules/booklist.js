@@ -43,6 +43,10 @@ class Book {
       this.bookDisplay.appendChild(div);
       div.classList.add('book_list_container');
     });
+    window.addEventListener('load', () => {
+      printDate();
+    });
+    
 
     document.querySelectorAll('.remove-button').forEach((button) => {
       button.addEventListener('click', () => {
