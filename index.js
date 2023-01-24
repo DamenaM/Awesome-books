@@ -38,7 +38,7 @@ class Book {
     this.books.forEach((book, index) => {
       const div = document.createElement('div');
       div.innerHTML = `
-       &nbsp ${book.title} &nbsp By 
+       &nbsp ${book.title} &nbsp by &nbsp
                 ${book.author}
                 <button class="remove-button" data-index="${index}">Remove</button>
                 <br><br>
