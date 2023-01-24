@@ -1,3 +1,5 @@
+import printDate from './datetime.js';
+
 class Book {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('books')) || [];
@@ -46,7 +48,6 @@ class Book {
     window.addEventListener('load', () => {
       printDate();
     });
-    
 
     document.querySelectorAll('.remove-button').forEach((button) => {
       button.addEventListener('click', () => {

@@ -13,4 +13,3 @@ newBook.buttonAdd.addEventListener('click', () => {
   newBook.bookTitle.value = '';
   newBook.bookAuthor.value = '';
 });
-
