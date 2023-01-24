@@ -22,7 +22,7 @@ capstone project - ICT EXPO Conference page
 
 # 📖MY Portfolio -ICT EXPO Conference page: <a name="about-project"></a>
 
->Awesome books project is created using HTML and CSS Use JavaScript to manipulate DOM elements. Here on the project, I prepared Two page for both mobile and desktop users .
+>Awesome books project is created using HTML and CSS Use JavaScript  ES6 to manipulate DOM elements. Here on the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,7 +70,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-``git clone `https://github.com/DamenaMAwesome-books.git`
+``git clone `https://github.com/DamenaM/Awesome-books.git`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
